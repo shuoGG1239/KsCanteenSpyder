@@ -21,3 +21,21 @@ export function dayLikeCount() {
 export function dayDislikeCount() {
     return {"names": ["清蒸海罗非", "沙姜白切鸭", "酱骨架", "酸菜煮剥皮鱼", "粉蒸肉", "腰豆焖猪手", "蒸酱鸭", "贡椒蒸白鲳", "双椒蒸鱼头", "萝卜炖牛腩", "酱椒蒸鱼头", "香酥飞天鸭", "蒜茸粉丝蒸花甲", "咸鱼蒸肉饼", "蒜泥拌茄子"], "counts": [65, 36, 36, 31, 31, 31, 30, 27, 27, 27, 27, 27, 25, 25, 24]}
 }
+
+export function dayOfWeekHighRate(dayOfWeek) {
+    if (dayOfWeek === 1) {
+        return  {"counts": [24, 17, 13, 7, 6, 6], "names": ["馒头", "白粥", "蒸玉米棒", "烤红薯", "牛肉汤面", "马拉盏"]}
+    }
+    if (dayOfWeek === 2) {
+        return  {"counts": [29, 18, 18, 6], "names": ["馒头", "油泼扯面", "白粥", "牛肉炸酱汤面"]}
+    }
+    if (dayOfWeek === 3) {
+        return  {"counts": [24, 17, 9, 8, 7], "names": ["馒头", "白粥", "排骨土豆汤面", "盐水毛豆", "牛肉炒面条"]}
+    }
+    if (dayOfWeek === 4) {
+        return  {"counts": [23, 16], "names": ["馒头", "白粥"]}
+    }
+    if (dayOfWeek === 5) {
+        return  {"counts": [22, 12, 10, 9, 8], "names": ["馒头", "白粥", "西红柿鸡蛋汤面", "各式水饺", "炝炒包菜"]}
+    }
+}
