@@ -1,36 +1,8 @@
 import requests
 import json
-import hashlib
 import time
-import base64
-import uuid
-from Crypto.PublicKey import RSA
-import rsa
 
 sess = requests.session()
-
-def encoded(content):
-    return content.encode()
-
-
-def rsaEncrypt(s, key):
-    rsa_key = RSA.importKey(pubkey % key)
-    x = rsa.encrypt(s.encode(), rsa_key)
-    return base64.b64encode(x).decode()
-
-
-def _sig(content_md5, date):
-    sha1 = hashlib.sha1(encoded(secret_key))
-    sha1.update(encoded(content_md5))
-    sha1.update(encoded("application/json"))
-    sha1.update(encoded(date))
-    signature = sha1.hexdigest()
-    # print('signature=', signature)
-    Authorization = "WPS-2:%s:%s" % (accessid, signature)
-    # print('authorization=',Authorization)
-    # return "WPS-2:%s:%s" % (accessid, sha1.hexdigest())
-    return Authorization
-
 
 def request(method, uri, body=None, cookie=None):
     header = {"content-type": "application/json"}
